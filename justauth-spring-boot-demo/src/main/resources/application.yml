@@ -1,0 +1,22 @@
+justauth:
+  enabled: true
+  extend:
+    enum-class: code.auth.demo.extend.ExtendSource
+    config:
+      ONEAUTH:
+        request-class: code.auth.demo.extend.ExtendOneAuthRequest
+        client-id: 871757219081748480           # clientId 由统一登录平台分配
+        client-secret: ZTvxMjkwNjIwMjMxMTMzMDMxMjYWX7   # 秘钥由统一登录平台分配
+        redirect-uri: http://1.15.51.147:8443/oauth/oneauth/callback    # 回调地址要配置和统一登录平台配置的回调地址一致
+
+auth:
+  serverUrl: http://1.15.51.147
+
+server:
+  port: 8989
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: debug
